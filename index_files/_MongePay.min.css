@@ -1,0 +1,294 @@
+*,:after,:before {
+    box-sizing: border-box
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%
+}
+
+.bodyColor {
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    line-height: 20px;
+    letter-spacing: .01em;
+    text-align: center;
+    background-color: #28b935
+}
+
+.login_container {
+    background-color: #fff;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,.06));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 4px;
+    width: 615px;
+    margin: 0 auto
+}
+
+.loginContainer_container_imageContainer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #edf1f5;
+    box-sizing: inherit
+}
+
+.loginContainer_container_imageContainer .logo {
+    width: auto;
+    height: 41px
+}
+
+.loginContainer_container_infoContainer {
+    padding: 20px
+}
+
+.loginContainer_container_infoContainer h5 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: .01em;
+    color: #28b935;
+    margin-bottom: 32px
+}
+
+.loginContainer_container_infoContainer h5 span {
+    color: #334d6e
+}
+
+.loginContainer_container_infoContainer input {
+    border: 0;
+    outline: 0;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: .01em;
+    color: #333;
+    width: 100%;
+    line-height: 1.4
+}
+
+.loginContainer_container_infoContainer p {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: .01em;
+    color: #334d6e;
+    margin-bottom: 32px
+}
+
+.loginContainer_container_infoContainer label {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: .01em;
+    color: #818e9b;
+    text-align: left;
+    width: 100%
+}
+
+.loginContainer_container_infoContainer div,.loginForm_mailContainer,.loginForm_passwordContainer,.loginForm_selectContainer {
+    margin-bottom: 16px
+}
+
+.loginForm_selectContainer {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: .01em;
+    color: #818e9b;
+    border-bottom: 1px solid #d3d8dd
+}
+
+.loginForm_selectContainer :focus,.loginForm_selectContainer :focus-visible {
+    outline: 0!important;
+    border-bottom: 1px solid #d3d8dd!important;
+    box-shadow: none
+}
+
+.loginForm_selectContainer_detalleSelect {
+    border: 0;
+    border-radius: initial;
+    font-size: 1rem;
+    width: 100%
+}
+
+.loginForm_mailContainer_inputContainer,.loginForm_passwordContainer_inputContainer {
+    border-bottom: 1px solid #d3d8dd;
+    width: 100%;
+    margin-top: 7px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.validation-summary-errors {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: .01em;
+    color: #334d6e;
+    display: block;
+    width: 95%;
+    margin: 16px 13px 0;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ed1c24;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: left
+}
+
+.validation-summary-errors ul {
+    margin: 0;
+    padding-left: 0;
+    background-image: url("../../img/X_Icon.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-right: 2rem
+}
+
+.validation-summary-errors ul li {
+    list-style-type: none;
+    margin-left: 1.5rem
+}
+
+.loginForm_otherContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px
+}
+
+.loginForm_otherContainer .loginForm_remember {
+    display: flex;
+    align-items: center;
+    font-family: "Source Sans Pro",sans-serif
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    font-size: 16px;
+    color: #152536
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer .check {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-right: 8px
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer .check:after {
+    left: 5px;
+    top: 2px;
+    width: 5.5px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    display: none
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer:hover input~.check {
+    border: 2px solid #7db745
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer input:checked~.check {
+    background-color: #7db745;
+    border: 0
+}
+
+.loginForm_otherContainer .loginForm_remember .loginForm_rememberContainer input:checked~.check:after {
+    display: block
+}
+
+.loginForm_otherContainer .loginForm_forgotPassword a {
+    font-weight: 600;
+    font-size: 13px;
+    color: #28b935
+}
+
+.loginForm_otherContainer .loginForm_forgotPassword a:hover {
+    color: #7db745
+}
+
+.loginForm_otherContainer .loginForm_forgotPassword a:active {
+    color: #28b935
+}
+
+.loginForm_userlessContainer {
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+
+.btnDefault {
+    background-color: #28b935;
+    color: #fff;
+    padding: 10px 70px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(16,156,241,.24);
+    border: 0
+}
+
+.btnDefault:hover {
+    background-color: #7db745
+}
+
+.btnDefault:active {
+    background-color: #28b935
+}
+
+.optionButton {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 40px;
+    border: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    transition: all .3s ease
+}
+
+.optionButton.yes {
+    background-color: #28b935;
+    color: #fff
+}
+
+.optionButton.no {
+    color: #28b935;
+    border: 2px solid #28b935
+}
+
+.optionButton:hover {
+    opacity: .8
+}
